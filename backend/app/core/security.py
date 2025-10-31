@@ -4,7 +4,8 @@ from jose import jwt
 from passlib.context import CryptContext
 from app.core.config import settings
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+# Using sha256_crypt instead of bcrypt for better compatibility
+pwd_context = CryptContext(schemes=["sha256_crypt"], deprecated="auto")
 
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
