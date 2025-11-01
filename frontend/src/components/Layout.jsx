@@ -89,29 +89,6 @@ const Layout = ({ children }) => {
             <span style={{fontSize: '1.8rem'}}>🎓</span>
             <span>БППК</span>
           </Link>
-          {user && (
-            <nav style={{ display: 'flex', gap: '1rem' }}>
-              <Link to={getDashboardLink()} style={{
-                color: 'rgba(255,255,255,0.9)',
-                textDecoration: 'none',
-                padding: '0.5rem 1rem',
-                borderRadius: '8px',
-                transition: 'all 0.3s ease',
-                background: 'rgba(255,255,255,0.1)',
-                backdropFilter: 'blur(10px)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.2)';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}>
-                🏠 Главная
-              </Link>
-            </nav>
-          )}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           {user ? (
@@ -227,45 +204,6 @@ const Layout = ({ children }) => {
       }}>
         {children}
       </main>
-      <footer style={{
-        background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
-        color: 'var(--text-secondary)',
-        padding: '2rem',
-        textAlign: 'center',
-        borderTop: '1px solid var(--border)',
-        marginTop: 'auto'
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '1rem'
-        }}>
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '2rem',
-            flexWrap: 'wrap'
-          }}>
-            <span style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-              <span style={{fontSize: '1.2rem'}}>🎓</span>
-              <span>БППК</span>
-            </span>
-            <span style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-              <span style={{fontSize: '1.2rem'}}>📧</span>
-              <span>info@bppk.ru</span>
-            </span>
-            <span style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
-              <span style={{fontSize: '1.2rem'}}>📱</span>
-              <span>+7 (XXX) XXX-XX-XX</span>
-            </span>
-          </div>
-          <p style={{fontSize: '0.875rem', opacity: 0.7}}>
-            &copy; 2024 БППК. Все права защищены.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };

@@ -310,39 +310,6 @@ const Login = () => {
               <span>Зарегистрироваться</span>
             </Link>
           </div>
-
-          {/* Test accounts info */}
-          <div style={{
-            marginTop: '2rem',
-            padding: '1.25rem',
-            background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%)',
-            borderRadius: '12px',
-            border: '1px solid rgba(102, 126, 234, 0.2)',
-            fontSize: '0.85rem'
-          }}>
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              marginBottom: '0.75rem',
-              color: 'var(--text-primary)',
-              fontWeight: '600'
-            }}>
-              <span>💡</span>
-              <span>Тестовые аккаунты:</span>
-            </div>
-            <div style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
-              <div style={{ marginBottom: '0.25rem' }}>
-                <strong style={{ color: 'var(--accent)' }}>Admin:</strong> admin@bppk.ru / admin123
-              </div>
-              <div style={{ marginBottom: '0.25rem' }}>
-                <strong style={{ color: 'var(--info)' }}>Teacher:</strong> teacher@bppk.ru / teacher123
-              </div>
-              <div>
-                <strong style={{ color: 'var(--success)' }}>Student:</strong> student@bppk.ru / student123
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
