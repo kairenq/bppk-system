@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%)">
+  <defs>
+    <style>
+      .title { font: bold 36px Arial; fill: #f59e0b; }
+      .actor-text { font: bold 18px Arial; fill: #e2e8f0; text-anchor: middle; }
+      .usecase { fill: #1e293b; stroke: #3b82f6; stroke-width: 3; }
+      .usecase-text { font: 16px Arial; fill: #e2e8f0; text-anchor: middle; }
+      .actor-line { stroke: #e2e8f0; stroke-width: 3; fill: none; stroke-linecap: round; }
+      .system-box { fill: none; stroke: #8b5cf6; stroke-width: 3; stroke-dasharray: 10,5; }
+      .system-title { font: bold 24px Arial; fill: #8b5cf6; text-anchor: middle; }
+      .connection { stroke: #64748b; stroke-width: 2; fill: none; }
+      .glow { filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5)); }
+    </style>
+
+    <!-- Gradient definitions -->
+    <linearGradient id="admin-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="teacher-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="student-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="700" y="50" class="title" text-anchor="middle">🎓 Система тестирования БППК</text>
+
+  <!-- System boundary box -->
+  <rect x="300" y="100" width="800" height="850" class="system-box" rx="20"/>
+  <text x="700" y="140" class="system-title">Система тестирования</text>
+
+  <!-- ACTOR 1: ADMIN (left side) -->
+  <g transform="translate(100, 250)">
+    <!-- Stick figure -->
+    <circle cx="50" cy="30" r="25" fill="url(#admin-gradient)" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="50" y1="55" x2="50" y2="120" class="actor-line" stroke="#fbbf24"/>
+    <line x1="50" y1="75" x2="20" y2="100" class="actor-line" stroke="#fbbf24"/>
+    <line x1="50" y1="75" x2="80" y2="100" class="actor-line" stroke="#fbbf24"/>
+    <line x1="50" y1="120" x2="20" y2="160" class="actor-line" stroke="#fbbf24"/>
+    <line x1="50" y1="120" x2="80" y2="160" class="actor-line" stroke="#fbbf24"/>
+    <!-- Crown emoji in circle -->
+    <text x="50" y="42" style="font-size: 24px; text-anchor: middle;">👑</text>
+    <text x="50" y="190" class="actor-text" style="fill: #fbbf24;">Администратор</text>
+  </g>
+
+  <!-- ACTOR 2: TEACHER (left side, middle) -->
+  <g transform="translate(100, 520)">
+    <!-- Stick figure -->
+    <circle cx="50" cy="30" r="25" fill="url(#teacher-gradient)" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="50" y1="55" x2="50" y2="120" class="actor-line" stroke="#60a5fa"/>
+    <line x1="50" y1="75" x2="20" y2="100" class="actor-line" stroke="#60a5fa"/>
+    <line x1="50" y1="75" x2="80" y2="100" class="actor-line" stroke="#60a5fa"/>
+    <line x1="50" y1="120" x2="20" y2="160" class="actor-line" stroke="#60a5fa"/>
+    <line x1="50" y1="120" x2="80" y2="160" class="actor-line" stroke="#60a5fa"/>
+    <!-- Teacher emoji in circle -->
+    <text x="50" y="42" style="font-size: 24px; text-anchor: middle;">👨‍🏫</text>
+    <text x="50" y="190" class="actor-text" style="fill: #60a5fa;">Преподаватель</text>
+  </g>
+
+  <!-- ACTOR 3: STUDENT (right side) -->
+  <g transform="translate(1200, 520)">
+    <!-- Stick figure -->
+    <circle cx="50" cy="30" r="25" fill="url(#student-gradient)" stroke="#34d399" stroke-width="2"/>
+    <line x1="50" y1="55" x2="50" y2="120" class="actor-line" stroke="#34d399"/>
+    <line x1="50" y1="75" x2="20" y2="100" class="actor-line" stroke="#34d399"/>
+    <line x1="50" y1="75" x2="80" y2="100" class="actor-line" stroke="#34d399"/>
+    <line x1="50" y1="120" x2="20" y2="160" class="actor-line" stroke="#34d399"/>
+    <line x1="50" y1="120" x2="80" y2="160" class="actor-line" stroke="#34d399"/>
+    <!-- Student emoji in circle -->
+    <text x="50" y="42" style="font-size: 24px; text-anchor: middle;">👨‍🎓</text>
+    <text x="50" y="190" class="actor-text" style="fill: #34d399;">Студент</text>
+  </g>
+
+  <!-- USE CASES -->
+
+  <!-- Admin Use Cases (top left area) -->
+  <ellipse cx="500" cy="220" rx="130" ry="40" class="usecase glow"/>
+  <text x="500" y="228" class="usecase-text">👥 Управление</text>
+  <text x="500" y="245" class="usecase-text">пользователями</text>
+
+  <ellipse cx="500" cy="310" rx="130" ry="40" class="usecase glow"/>
+  <text x="500" y="318" class="usecase-text">📚 Управление</text>
+  <text x="500" y="335" class="usecase-text">курсами</text>
+
+  <ellipse cx="500" cy="400" rx="130" ry="40" class="usecase glow"/>
+  <text x="500" y="410" class="usecase-text">📊 Просмотр статистики</text>
+
+  <ellipse cx="720" cy="260" rx="130" ry="40" class="usecase glow"/>
+  <text x="720" y="270" class="usecase-text">📋 Просмотр всех тестов</text>
+
+  <!-- Teacher Use Cases (middle left area) -->
+  <ellipse cx="500" cy="550" rx="130" ry="40" class="usecase glow"/>
+  <text x="500" y="560" class="usecase-text">✏️ Создание тестов</text>
+
+  <ellipse cx="500" cy="640" rx="130" ry="40" class="usecase glow"/>
+  <text x="500" y="650" class="usecase-text">📝 Редактирование тестов</text>
+
+  <ellipse cx="720" cy="550" rx="130" ry="40" class="usecase glow"/>
+  <text x="720" y="560" class="usecase-text">❓ Добавление вопросов</text>
+
+  <ellipse cx="720" cy="640" rx="130" ry="40" class="usecase glow"/>
+  <text x="720" y="650" class="usecase-text">📈 Просмотр результатов</text>
+
+  <!-- Student Use Cases (right area) -->
+  <ellipse cx="900" cy="550" rx="130" ry="40" class="usecase glow"/>
+  <text x="900" y="560" class="usecase-text">📖 Просмотр тестов</text>
+
+  <ellipse cx="900" cy="640" rx="130" ry="40" class="usecase glow"/>
+  <text x="900" y="650" class="usecase-text">✍️ Прохождение тестов</text>
+
+  <ellipse cx="900" cy="730" rx="130" ry="40" class="usecase glow"/>
+  <text x="900" y="735" class="usecase-text">🎯 Просмотр своих</text>
+  <text x="900" y="752" class="usecase-text">результатов</text>
+
+  <!-- Shared Use Cases -->
+  <ellipse cx="700" cy="820" rx="130" ry="40" class="usecase glow"/>
+  <text x="700" y="830" class="usecase-text">🔐 Авторизация</text>
+
+  <ellipse cx="500" cy="820" rx="130" ry="40" class="usecase glow"/>
+  <text x="500" y="830" class="usecase-text">👤 Профиль</text>
+
+  <!-- CONNECTIONS -->
+
+  <!-- Admin connections -->
+  <line x1="180" y1="330" x2="370" y2="220" class="connection"/>
+  <line x1="180" y1="330" x2="370" y2="310" class="connection"/>
+  <line x1="180" y1="330" x2="370" y2="400" class="connection"/>
+  <line x1="180" y1="330" x2="590" y2="260" class="connection"/>
+  <line x1="180" y1="400" x2="500" y2="780" class="connection"/>
+  <line x1="180" y1="380" x2="630" y2="800" class="connection"/>
+
+  <!-- Teacher connections -->
+  <line x1="180" y1="600" x2="370" y2="550" class="connection"/>
+  <line x1="180" y1="600" x2="370" y2="640" class="connection"/>
+  <line x1="180" y1="600" x2="590" y2="550" class="connection"/>
+  <line x1="180" y1="600" x2="590" y2="640" class="connection"/>
+  <line x1="180" y1="660" x2="500" y2="780" class="connection"/>
+  <line x1="180" y1="650" x2="630" y2="800" class="connection"/>
+
+  <!-- Student connections -->
+  <line x1="1200" y1="600" x2="1030" y2="550" class="connection"/>
+  <line x1="1200" y1="600" x2="1030" y2="640" class="connection"/>
+  <line x1="1200" y1="600" x2="1030" y2="730" class="connection"/>
+  <line x1="1200" y1="660" x2="770" y2="800" class="connection"/>
+
+  <!-- Legend -->
+  <g transform="translate(320, 900)">
+    <rect x="0" y="0" width="760" height="60" fill="#1e293b" stroke="#475569" stroke-width="2" rx="10"/>
+    <circle cx="30" cy="30" r="15" fill="url(#admin-gradient)"/>
+    <text x="55" y="37" style="font: 14px Arial; fill: #fbbf24;">Администратор</text>
+    <text x="185" y="37" style="font: 14px Arial; fill: #94a3b8;">- Полный контроль системы</text>
+
+    <circle cx="400" cy="30" r="15" fill="url(#teacher-gradient)"/>
+    <text x="425" y="37" style="font: 14px Arial; fill: #60a5fa;">Преподаватель</text>
+    <text x="550" y="37" style="font: 14px Arial; fill: #94a3b8;">- Создание тестов</text>
+  </g>
+
+  <g transform="translate(320, 965)">
+    <circle cx="30" cy="15" r="15" fill="url(#student-gradient)"/>
+    <text x="55" y="22" style="font: 14px Arial; fill: #34d399;">Студент</text>
+    <text x="135" y="22" style="font: 14px Arial; fill: #94a3b8;">- Прохождение тестов и просмотр результатов</text>
+  </g>
+</svg>
